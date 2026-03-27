@@ -62,6 +62,7 @@ def sample_openai_requests(
                     dataset.append(json.loads(line))
                 except json.JSONDecodeError:
                     # Skip invalid JSON lines
+                    print(f"Warning: Skipping invalid JSON line: {line.strip()}")
                     continue
 
     # Fields that should NOT be passed through extra_request_body
