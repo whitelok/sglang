@@ -107,7 +107,7 @@ def sample_openai_requests(
             )
         )
 
-    print(f"Loaded {len(filtered_dataset)} OpenAI-format requests")
+    print(f"Loaded {len(filtered_dataset)} OpenAI-format requestssssssss")
     print(f"#Input tokens: {np.sum([x.prompt_len for x in filtered_dataset])}")
     print(f"#Output tokens: {np.sum([x.output_len for x in filtered_dataset])}")
     return filtered_dataset
