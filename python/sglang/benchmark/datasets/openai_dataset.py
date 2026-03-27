@@ -52,6 +52,7 @@ def sample_openai_requests(
     - Other OpenAI API parameters are also extracted and passed through
     """
     dataset = []
+    print(f"num_requests={num_requests}, fixed_output_len={fixed_output_len}")
     with open(dataset_path, "r") as f:
         for line in f:
             if num_requests > 0 and len(dataset) >= num_requests:
@@ -107,7 +108,6 @@ def sample_openai_requests(
             )
         )
 
-    print(f"Loaded {len(dataset)} total OpenAI-format requests from {dataset_path}")
     print(f"Loaded {len(filtered_dataset)} OpenAI-format requests")
     print(f"#Input tokens: {np.sum([x.prompt_len for x in filtered_dataset])}")
     print(f"#Output tokens: {np.sum([x.output_len for x in filtered_dataset])}")
