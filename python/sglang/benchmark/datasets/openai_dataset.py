@@ -52,7 +52,7 @@ def sample_openai_requests(
     - Other OpenAI API parameters are also extracted and passed through
     """
     dataset = []
-    print(f"num_requests={num_requests}, fixed_output_len={fixed_output_len}")
+    print(f"num_requests={num_requests}, len(dataset)={len(dataset)}, fixed_output_len={fixed_output_len}")
     with open(dataset_path, "r") as f:
         for line in f:
             if num_requests > 0 and len(dataset) >= num_requests:
