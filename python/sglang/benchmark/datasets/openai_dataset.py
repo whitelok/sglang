@@ -71,6 +71,7 @@ def sample_openai_requests(
 
     filtered_dataset: List[DatasetRow] = []
     for data in dataset:
+        print("data:", data)
         messages = data.get("messages", [])
         if not messages:
             continue
